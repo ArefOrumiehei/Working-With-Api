@@ -1,0 +1,39 @@
+@font-face {
+    font-family: vazir;
+    src: url(./Fonts/Vazir-Bold.ttf);
+}
+
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: vazir;
+    background-color: grey;
+}
+
+ul.holidays{
+    list-style-image: url('./svg/arrow-left-solid.svg');
+}
+
+.row{
+    margin-top: 20px;
+}
+
+#relegious-time{
+    background-color: rgb(126, 207, 13);
+}
+
+#author {
+    background-color: rgb(255, 89, 0);
+}
+
+#weather{
+    background-color: rgb(181, 110, 239);
+}
+
+.btn{
+    margin-bottom: 10px;
+}
+
+.head {
+    font-size: 20px;
+}

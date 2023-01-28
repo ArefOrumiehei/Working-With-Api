@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Live Time</title>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="row">
+            <div class="date-time col-md-5 bg-warning border border-dark border-2 rounded shadow" id="date-time"></i></div>
+            <div class="col-md"></div> <br>
+            <div class="holiday col-md-6 bg-info border border-dark border-2 rounded shadow" id="holiday">
+                <p class="head">رویدادهای امروز</p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-5 border border-dark border-2 rounded shadow" id="relegious-time">
+                <p class="head">اوقات شرعی</p>
+                <label for="city">شهر مورد نظر خود را انتخاب کنید :</label>
+                <select class="form-select" aria-label="Default select example" id="city">
+                    <option value="" selected disabled>--انتخاب--</option>
+                    <option value="تهران">تهران</option>
+                    <option value="مشهد">مشهد</option>
+                    <option value="تبریز">تبریز</option>
+                    <option value="قشم">قشم</option>
+                    <option value="شیراز">شیراز</option>
+                    <option value="اصفهان">اصفهان</option>
+                    <option value="یزد">یزد</option>
+                    <option value="چالوس">چالوس</option>
+                    <option value="کیش">کیش</option>
+                </select>
+                  <br>
+                  <div id="religiousTimes-result" class="religiousTimes-result"></div>
+                  <br>
+                  <button type="button" class="btn btn-primary" id="sub-btn">تایید</button>
+            </div>
+            <div class="col-md"></div> <br>
+            <div class="col-md-6 border border-dark border-2 rounded shadow" id="author">
+                <p class="head">سخن بزرگان</p>
+                <label for="authors">نویسنده و یا شخص مورد نظر را انتخاب کنید :</label>
+                <select class="form-select" aria-label="Default select example" id="authors">
+                    <option value="" selected disabled>--انتخاب--</option>
+                    <option value="1">افلاطون</option>
+                    <option value="5">نیچه</option>
+                    <option value="6">حضرت محمد (ص)</option>
+                    <option value="8">بنجامین فرانكلین</option>
+                    <option value="15">سقراط</option>
+                    <option value="20">ویكتور هوگو</option>
+                    <option value="25">امام علی (ع)</option>
+                    <option value="29">انجیل متی</option>
+                    <option value="33">ناپلئون</option>
+                    <option value="36">توماس ادیسون</option>
+                    <option value="44">آلبرت انیشتین</option>
+                    <option value="64">آنتوان دوسنت اگزوپری</option>
+                    <option value="65">زیگموند فروید</option>
+                    <option value="71">ویلیام شكسپیر</option>
+                    <option value="99">آبراهام لینكلن</option>
+                    <option value="101">لئوناردو داوینچی</option>
+                    <option value="106">وینستون چرچیل</option>
+                    <option value="149">اسپینوزا</option>
+                    <option value="156">ماهاتما گاندی</option>
+                    <option value="169">علی اكبر دهخدا</option>
+                    <option value="180">فیثاغورث</option>
+                    <option value="212">ارسطو</option>
+                    <option value="245">ارنست همینگوی</option>
+                    <option value="270">نادر شاه افشار</option>
+                    <option value="314">امام رضا (ع)</option>
+                    <option value="359">ونسان ونگوگ</option>
+                    <option value="369">ملاصدرا</option>
+                    <option value="387">عیسی مسیح</option>
+                    <option value="607">ابوعلی سینا</option>
+                    <option value="1344">محمد علی كلی</option>
+                </select>
+                <br>
+                <div id="text"></div>
+                <br>
+                <button type="button" class="btn btn-primary" id="sub-btn2">تایید</button>
+            </div>
+        </div>
+    </div>
+    <script src="./class.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
