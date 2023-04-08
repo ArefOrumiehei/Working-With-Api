@@ -26,6 +26,11 @@ function eventListeners(){
 function dateAndTime(){
     let time = new Date()
     let hour = time.getHours() + 1
+    if(hour == 24){
+        hour = "00"
+    }else if(1 <= hour <= 9){
+        hour = "0" + hour
+    }
     let minute = time.getMinutes()
     let second = time.getSeconds()
 
@@ -36,7 +41,7 @@ function dateAndTime(){
     <div class="timeAndDate">
         <div>
             <span class+"time-title">ساعت : </span>
-            <span class="time">${second} : ${minute} : ${hour}</span>
+            <span class="time">${hour}:${minute}:${second}</span>
         </div>
         <div>
             <ul class="date-day">
