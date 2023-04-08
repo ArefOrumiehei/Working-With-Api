@@ -20,18 +20,31 @@ function eventListeners(){
 }
 
 
-
 // functions
 
 // show shamsi date and time
 function dateAndTime(){
-    let time = new Date().toString().slice(16,24)
+    let time = new Date()
+    let hour = time.getHours() + 1
+    let minute = time.getMinutes()
+    let second = time.getSeconds()
+
     let date = new Date().toLocaleDateString('fa-IR-u-nu-latn');
     let day = pesianDate.getDayName()
 
     dateAndTime_div.innerHTML = `
-        <h4 class="time"><span>ساعت : </span>${time}</h4>
-        <h4 class="date"><span>تاریخ : </span>${date} <span>روز : </span>${day}</h4>
+    <div class="timeAndDate">
+        <div>
+            <span class+"time-title">ساعت : </span>
+            <span class="time">${second} : ${minute} : ${hour}</span>
+        </div>
+        <div>
+            <ul class="date-day">
+                <li><span>تاریخ : </span>${date}</li> 
+                <li><span>روز : </span>${day}</li>   
+            </ul>
+        </div>
+    </div>
     `
 
 }
@@ -73,7 +86,7 @@ async function religiousTimes(){
         let infos = info.result
   
         religiousTimes_div.innerHTML = `
-            <p>شهر: ${infos.city}</p>
+            <p>شهر : ${infos.city}</p>
             <p>اذان صبح : ${infos.azan_sobh}</p>
             <p>اذان ظهر : ${infos.azan_zohre}</p>
             <p>اذان مغرب : ${infos.azan_maghreb}</p>

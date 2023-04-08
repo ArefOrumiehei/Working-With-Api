@@ -37,3 +37,10 @@ ul.holidays{
 .head {
     font-size: 20px;
 }
+.timeAndDate {
+    font-size: 1.5rem;
+}
+
+.date-day {
+    list-style: none;
+}
