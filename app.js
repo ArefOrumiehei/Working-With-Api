@@ -49,26 +49,26 @@ async function dateAndTime(){
 setInterval(dateAndTime , 1000)
 
 // show events on now day
-async function holidays(){
-    let date = new Date().toLocaleDateString('fa-IR-u-nu-latn');
+// async function holidays(){
+//     let date = new Date().toLocaleDateString('fa-IR-u-nu-latn');
 
-    let url = `https://persiancalapi.ir/jalali/${date}`
+//     let url = `https://persiancalapi.ir/jalali/${date}`
+// console.log(url);
+//     let response = await fetch(url)
+//     let json = await response.json()
+//     .then(data => {
+//         let holidays = data.events
 
-    let response = await fetch(url)
-    let json = await response.json()
-    .then(data => {
-        let holidays = data.events
-
-        holidays.forEach(day => {
-            holiday_div.innerHTML += `
-                <ul dir="rtl" class="holidays">
-                    <li class="info">${day.description}</li>
-                </ul>
-            `
-        });
-    })
-}
-holidays()
+//         holidays.forEach(day => {
+//             holiday_div.innerHTML += `
+//                 <ul dir="rtl" class="holidays">
+//                     <li class="info">${day.description}</li>
+//                 </ul>
+//             `
+//         });
+//     })
+// }
+// holidays()
 
 // show religious time of cities
 async function religiousTimes(){
