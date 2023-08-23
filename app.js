@@ -16,7 +16,7 @@ const text_div = document.querySelector('#text')
 eventListeners()
 function eventListeners(){
     submitBtn.addEventListener('click' , religiousTimes)
-    submitBtn2.addEventListener('click' , author)
+    // submitBtn2.addEventListener('click' , author)
 }
 
 
@@ -44,31 +44,36 @@ async function dateAndTime(){
         </div>
     </div>
     `
-
 }
 setInterval(dateAndTime , 1000)
 
 // show events on now day
-// async function holidays(){
-//     let date = new Date().toLocaleDateString('fa-IR-u-nu-latn');
+// async function holidays() {
+//     const date = new Date().toLocaleDateString('fa-IR-u-nu-latn');
 
-//     let url = `https://persiancalapi.ir/jalali/${date}`
-// console.log(url);
+//     const year = date.slice(0, 4);
+//     const month = date.slice(5, 6);
+//     const day = date.slice(7, 8);
+
+//     const url = `https://holidayapi.ir/jalali/${year}/${month}/${day}`;
+//     console.log(url);
+
 //     let response = await fetch(url)
 //     let json = await response.json()
-//     .then(data => {
-//         let holidays = data.events
-
-//         holidays.forEach(day => {
-//             holiday_div.innerHTML += `
-//                 <ul dir="rtl" class="holidays">
-//                     <li class="info">${day.description}</li>
-//                 </ul>
-//             `
-//         });
-//     })
+    
+//     console.log(json);
+//     const holidays = data.events;
+    
+//     holiday_div.innerHTML = ''; // Clear the previous content
+//     holidays.forEach(day => {
+//         holiday_div.innerHTML += `
+//             <ul dir="rtl" class="holidays">
+//                 <li class="info">${day.description}</li>
+//             </ul>
+//         `;
+//     });
 // }
-// holidays()
+// holidays();
 
 // show religious time of cities
 async function religiousTimes(){
@@ -82,7 +87,7 @@ async function religiousTimes(){
     let json = await response.json()
     .then(info => {
         let infos = info.result
-  
+
         religiousTimes_div.innerHTML = `
             <p>شهر : ${infos.city}</p>
             <p>اذان صبح : ${infos.azan_sobh}</p>
@@ -97,20 +102,20 @@ async function religiousTimes(){
 
 
 // show quote of authors
-async function author(){
+// async function author(){
 
-    const authorsID = document.querySelector('#authors').value
+//     const authorsID = document.querySelector('#authors').value
 
-    let url = `https://one-api.ir/sokhan/?token=${token}&action=random_by_author&author_id=${authorsID}`
+//     let url = `https://one-api.ir/sokhan/?token=${token}&action=random_by_author&author_id=${authorsID}`
 
-    let response = await fetch(url)
-    let json = await response.json()
-    .then(info => {
-        let result = info.result
+//     let response = await fetch(url)
+//     let json = await response.json()
+//     .then(info => {
+//         let result = info.result
 
-        text_div.innerHTML = `
-            <q>${result.text}</q>
-        `
+//         text_div.innerHTML = `
+//             <q>${result.text}</q>
+//         `
 
-    })
-}
+//     })
+// }
